@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="se">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website-page</title>
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div id="mobile">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a href="#">
+            <img src="images/logo.png" alt="#" />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $about ->url; ?>"
+                  >O nama</a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $work ->url; ?>"
+                  ><?= $work ->title; ?></a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <div class="dropdown">
+                  <button
+                    class="dropdown-toggle nav-link header-links dropdown-style"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <?php echo __('Usluge');?>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="<?= $web_development ->url; ?>"
+                        ><?= $web_development ->title; ?></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="<?= $videography ->url; ?>"
+                        ><?= $videography ->title; ?></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="<?= $web_corporate_development ->url; ?>"
+                        ><?= $web_corporate_development ->title; ?></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $join ->url; ?>"
+                  ><?= $join ->title; ?></a
+                >
+              </li>
+              <?php foreach($languages as $l) : ?>
+              <!-- <li class="languages nav-item px-lg-3">
+                           <a class="nav-link header-links" href="<?php echo $page->localUrl($l);?>">
+                              <img class="justify-content-center align-self-center" src="<?php echo $config->urls->templates . 'img/icons/' . $l->title . '.png';?>" alt="<?php echo $l->title ?>">
+                           </a>
+                        </li>   -->
+              <?php startforeach; ?>
+            </ul>
+
+            <form class="d-flex px-lg-3" action="<?= $contact ->url; ?>">
+              <button class="btn" type="submit">
+                <?= $contact ->title; ?> <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+   
+
+    
+
+<section class="d-none d-md-block">
+    <div class="container-fluid hidden-md" style="padding-right: 0;padding-left: 0;">
+        <?php $image=$page->fullwidth_image;
+        if($image) {
+        $thumb = $image->webp;
+        echo "<img src='$thumb->url' class='img-fluid mx-auto d-block' alt='$image->description' loading='lazy'></a>";
+        }
+   ?>
+
+    </div>
+
+</section>
+
+<section class="d-block d-md-none">
+    <div class="container-fluid hidden-md" style="padding-right: 0;padding-left: 0;">
+        <?php $image=$page->image;
+        if($image) {
+        $thumb = $image->webp;
+        echo "<img src='$thumb->url' class='img-fluid mx-auto d-block' alt='$image->description'></a>";
+        }
+        
+   ?>
+
+    </div>
+
+</section>
+
+<section id="heading">
+    <div class="container-md my-md-5 pb-5">
+        <div class="row no-gutters d-flex justify-content-center">
+            <div class="col-md-6 col-xs-12 text-center no-overflow px-4">
+                <h1 class="header-h1" data-aos="fadeInUp" data-aos-duration="1000" data-aos-delay="200">
+                     <?php echo $page->header_h1; ?>
+                </h1>
+                <p class="p-center" data-aos="fadeInUp" data-aos-duration="1000" data-aos-delay="1000">  <?php echo $page->body; ?></p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="d-none d-md-block mt-3">
+    <div class="container-fluid hidden-md" style="padding-right: 0;padding-left: 0;">
+        <?php $image=$page->fullwidth_image_2;
+        if($image) {
+        $thumb = $image->webp;
+        echo "<img src='$thumb->url' class='img-fluid mx-auto d-block' alt='$image->description'></a>";
+        }
+   ?>
+
+    </div>
+
+</section>
+
+
+<section class="d-block d-md-none ">
+    <div class="container-fluid hidden-md" style="padding-right: 0;padding-left: 0;">
+        <?php $image=$page->image_2;
+        if($image) {
+        $thumb = $image->webp;
+        echo "<img src='$thumb->url' class='img-fluid mx-auto d-block' alt='$image->description' ></a>";
+        }
+        
+   ?>
+
+    </div>
+
+</section>
+
+<section>
+    <div class="container my-5 d-none d-md-block">
+        <div class="card-columns">
+
+            <?php foreach($page->website_pages as $pages) 
+        
+        { ?>
+
+            <?php
+
+        echo "
+        
+        <div class='card-view'>
+            <img class='card-img-top' src='{$pages->image_2->webp->url}' alt='Card image cap'  loading='lazy'>
+        </div>
+        
+        "; 
+        ?>
+
+            <?php }
+
+        ?>
+
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Web page mobile view  -->
+<section class="d-block d-md-none ">
+    <div class="container-fluid hidden-md" style="padding-right: 0;padding-left: 0;">
+        <?php $image=$page->mobile_image_1;
+        if($image) {
+        $thumb = $image->webp;
+        echo "<img src='$thumb->url' class='img-fluid mx-auto d-block my-5' alt='$image->description'></a>";
+        }
+        
+        ?>
+
+    </div>
+
+</section>
+
+
+<section>
+    <div class="container-fluid silver-color py-5">
+        <div class="row px-0 px-md-5">
+            <?php foreach($page->mobile_pages as $pages) 
+        
+        { ?>
+
+            <?php
+
+        echo "
+        <div class='py-3 py-md-0 col-6 col-md-3 text-center'><img class='' src='{$pages->image_3->webp->url}' alt='Card image cap'  loading='lazy'></div>
+        "; 
+        ?>
+
+            <?php }
+
+        ?>
+        </div>
+    </div>
+</section>
+
+
+
+<section>
+    <div class="" <?php $image=$page->fullwidth_image_3;
+        if($image) {
+        $thumb = $image->webp;
+        echo "style= background-image:url('$thumb->url');background-size:cover;";
+        }
+   ?>">
+
+        <div class=" container">
+            <!-- row -->
+            <div class="row align-items-center g-0">
+
+
+                <!-- img -->
+                <div class="d-none d-lg-block col-xl-6 col-lg-6 col-md-12 text-lg-end text-center pt-6">
+
+                    <?php $image=$page->image_3;
+                    if($image) {
+                     $thumb = $image->webp;
+                    echo "<img src='$thumb->url' class='img-fluid' alt='$image->description' loading='lazy'></a>";
+                    }
+                    ?>
+
+                </div>
+
+                <div class="col-xl-6 col-lg-6 col-md-12 text-lg-left text-center py-5 py-lg-0">
+                    <!-- heading -->
+                    <div>
+                       <h3 class="text-white header-h2 pe-lg-8 "><?php echo __('Pogledaj Websajt');?>
+                        </h3>
+                        <!-- btn -->
+                        <a href="<?php echo $page->linking; ?>" class="btn btn-white mt-5" target="_blank"><?php echo __('Kliknite ovdje');?></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section>
+    <div class="py-5 no-overflow"
+        style="background: linear-gradient(90deg, rgba(165,179,191,1) 0%, rgba(235,239,241,1) 50%);">
+        <div class="container py-0 py-lg-5 px-0 px-lg-5">
+            <!-- row -->
+            <div class="row align-items-center g-0">
+
+
+
+
+                <div class="col-xl-6 col-lg-6 col-md-12 text-lg-left text-center py-5 py-lg-0">
+                    <!-- heading -->
+                    <div>
+                        <h3 class="text-black header-h2 pe-lg-8"><?php echo __('Treba Vam ponuda?');?>
+                        </h3>
+                        <!-- btn -->
+                        <a href="<?= $contact ->url; ?>" class="btn btn-dark mt-4"><?php echo __('Kliknite ovdje');?></a>
+                    </div>
+                </div>
+
+
+
+                <!-- img -->
+                <div class="col-xl-6 col-lg-6 col-md-12 text-lg-end text-center px-5">
+
+                    <?php $image=$page->image_4;
+                    if($image) {
+                     $thumb = $image->webp;
+                    echo "<img src='$thumb->url' class='img-fluid' alt='$image->description' loading='lazy'></a>";
+                        }
+                        ?>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container mt-5 py-5 px-2 px-md-5 ">
+
+
+    <div class="row no-gutters">
+
+        <div class="col-md-6 col-xs-12 no-overflow">
+
+
+
+            <h2 class="header-h2 " data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+                  <?php echo $page->title_2; ?>
+            </h2>
+
+            <p class="pt-2" data-aos="fadeInUp" data-aos-duration="1000" data-aos-delay="200">
+                  <?php echo $page->body2; ?></p>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="pt-md-5 col-md-5 col-xs-12 no-overflow text-md-center text-lg-right">
+           <a href="<?= $work ->url; ?>"><button class="btn primary-button"><?php echo __('Pogledaj sve');?></button></a>
+        </div>
+    </div>
+
+    <div class="px-5 px-md-0">
+
+
+        <div class="items">
+
+            <?php foreach($page->project_links as $projects) 
+        
+        { ?>
+
+            <?php
+
+        echo "
+        <div class='slide'>
+        <a href='{$projects->linking}' target='_blank'><img src='{$projects->image->webp->url}' alt='Portoflio RobotCode' loading='lazy'></a>
+        </div>
+        "; 
+        ?>
+
+            <?php }
+
+        ?>
+
+
+        </div>
+
+    </div>
+</div>
+
+  
+  
+    <footer>
+      <div class="container">
+        <h1>test</h1>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="vcard">
+              <span class="fn org d-none">Test</span>
+              <span class="tel d-none">Test</span>
+              <h5>Test</h5>
+              <p class="adr">
+                <span class="street-address">Test</span><br />
+                <span class="postal-code">Test</span><br />
+                <span class="locality">Test</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Test</h5>
+            <p>031 - 25 15 05</p>
+            <a href="<?= $contact ->url; ?>"
+              >Test<i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+          <div class="col-md-4 dash">
+            <h5>Test</h5>
+            <div class="character">
+              <p>Aleksa Luketa</p>
+              <a href="<?= $contact ->url; ?>"
+                >Test<i class="bi bi-arrow-right"></i
+              ></a>
+              <img
+                src="/site/templates/img/aleksa.png"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-text">
+          <div class="row">
+            <div class="col-md-5">
+              <ul class="navbar-nav">
+                <a href="https://www.linkedin.com/company/robotcodesweden/">
+                  <li>Linkedin</li>
+                </a>
+                <a href="https://www.instagram.com/robot.code/">
+                  <li>Instagram</li>
+                </a>
+                <a href="https://www.facebook.com/robotcode.me">
+                  <li>Facebook</li>
+                </a>
+              </ul>
+            </div>
+
+            <div class="col-md-5">
+              <p class="robot">
+                ©<span id="year"></span> RobotCode, All rights reserved.
+              </p>
+            </div>
+
+            <div class="col-md-2">
+              <p class="policy">
+                <a href="<?= $privacy ->url; ?>" style="color: #5a5961">Test</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- js -->
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('.items').slick({
+                dots: false,
+                arrows: false,
+                centerMode: false,
+                centerPadding: '100px',
+                slidesToShow: 1,
+                arrows: true,
+                mobileFirst: true,
+                autoplay: false,
+                responsive: [{
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                        }
+                    },
+        
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 500,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            })
+        });
+        </script>
+  </body>
+</html>
