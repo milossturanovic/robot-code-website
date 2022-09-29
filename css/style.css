@@ -3377,3 +3377,41 @@ footer a {
 }
 /* responsive end */
 /* nikola  end*/
+
+/* new code 29.09 */
+
+.gray-background{
+  background-color: #E5E5E5;
+
+}
+
+
+.background-gray-light{
+  background-color: #EFEFEF;
+}
+
+.offset-image{
+  position: relative;
+  bottom: 16rem;
+}
+
+
+.spacing-200{
+  height: 200px;
+}
+
+
+.spacing-300{
+  height: 300px;
+}
+
+
+
+
+
+
+@media (min-width: 1200px) {
+  .width-1000{
+    width: 1000px !important;
+  }
+}
