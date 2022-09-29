@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="se">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO</title>
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div id="mobile">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a href="#">
+            <img src="images/logo.png" alt="#" />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $about ->url; ?>"
+                  ><?= $about ->title; ?></a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $work ->url; ?>"
+                  ><?= $work ->title; ?></a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <div class="dropdown">
+                  <button
+                    class="dropdown-toggle nav-link header-links dropdown-style"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <?php echo __('Usluge');?>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="<?= $web_development ->url; ?>"
+                        ><?= $web_development ->title; ?></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="<?= $videography ->url; ?>"
+                        ><?= $videography ->title; ?></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="<?= $web_corporate_development ->url; ?>"
+                        ><?= $web_corporate_development ->title; ?></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $join ->url; ?>"
+                  ><?= $join ->title; ?></a
+                >
+              </li>
+              <?php foreach($languages as $l) : ?>
+              <!-- <li class="languages nav-item px-lg-3">
+                           <a class="nav-link header-links" href="<?php echo $page->localUrl($l);?>">
+                              <img class="justify-content-center align-self-center" src="<?php echo $config->urls->templates . 'img/icons/' . $l->title . '.png';?>" alt="<?php echo $l->title ?>">
+                           </a>
+                        </li>   -->
+              <?php startforeach; ?>
+            </ul>
+
+            <form class="d-flex px-lg-3" action="<?= $contact ->url; ?>">
+              <button class="btn" type="submit">
+                <?= $contact ->title; ?> <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <section class="custom-1 seo-custom-1">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 d-flex flex-column gap-1">
+            <div class="row">
+              <div class="col-12">
+                <h4 class="subtext color-orange">OUR SERVICES</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h1 class="text-capitalize color-white">
+                  Search Engine Optimization
+                </h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p class="color-white">
+                  Over 10 years of experience in creating visibility using SEO!
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p class="color-white">
+                  Robotcode is a web agency in Gothenburg with broad expertise
+                  in many different areas. One of our main competencies is in
+                  search engine optimization, and we help our clients rank
+                  higher on Google on a daily basis with the help of sustainable
+                  strategies. We are a team of skilled designers, developers,
+                  SEO specialists and IT consultants who work to create a
+                  complete online world for all our clients. We have offices in
+                  four different countries around the world and an incredible
+                  breadth of expertise in all our areas of expertise.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <a class="gradient-btn" href="#">Book a Consult</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img class="img-fluid" src="images/slike/img-13.png" alt="laptop" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-2 seo-custom-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="header-h2">Why SEO?</h2>
+          </div>
+          <div class="col-lg-5 col-12">
+            <p>
+              Did you know that the companies that appear in the first three
+              results of a Google search are the ones most likely to be hired or
+              get the most clicks? That any result below the top three is
+              unlikely to get the same visibility and reach the same number of
+              customers? This is where SEO comes in.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-3 seo-custom-3">
+      <div class="container">
+        <div class="row align-items-center flex-md-row flex-column-reverse">
+          <div class="col-md-6 d-flex flex-column gap-1">
+            <div class="row">
+              <div class="col-12">
+                <h4 class="subtext color-orange text-uppercase">our process</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h2 class="color-white header-h2">
+                  Our work with <span class="gradient-color">SEO</span>
+                </h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p class="color-white">
+                  We’re experts in all things SEO, whether it’s search engine
+                  optimising content, analysing trends and developing the right
+                  keywords for your industry, keyword advertising or just
+                  getting you seen on Google. We know the industry, we know the
+                  strategies and we know
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img class="img-fluid" src="images/slike/img-14.png" alt="laptop" />
+          </div>
+        </div>
+        <div class="cards row justify-content-between">
+          <div class="col-lg-4 mb-4 col-12">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="images/slike/icon-5.png"
+                alt="card icon"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Analysis.</h5>
+                <p class="card-text">
+                  In order to succeed with your search engine optimisation, you
+                  first need to carry out analyses. At Robotcode, we analyse
+                  your website and create a report based on how you are doing,
+                  which keywords you are using and which you should be using. We
+                  analyse your content, your website and your other channels and
+                  give you a basis for your current ranking.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4 col-12">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="images/slike/icon-6.png"
+                alt="card icon"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Strategies.</h5>
+                <p class="card-text">
+                  All forms of digital marketing need to be supported by
+                  strategies. This is something we at Robotcode know about, and
+                  something we work on for all our clients. Based on the
+                  analysis, we develop a tailored strategy that we then work
+                  from throughout the process.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4 col-12">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="images/slike/icon-4.png"
+                alt="card icon"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Objectives and KPIs.</h5>
+                <p class="card-text">
+                  Your search engine optimisation needs to have a goal. Do you
+                  want to rank high on Google? Do you want to get more out of
+                  your ads? Do you want to be seen locally? We’ll work together
+                  to develop goals for your business and find the right KPIs
+                  (Key Performance Indicators) to base our work on.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4 col-12">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="images/slike/icon-5.png"
+                alt="card icon"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Search Engine Optimization</h5>
+                <p class="card-text">
+                  Once we’ve done our analysis, developed a strategy and set
+                  sustainable goals - that’s when the work on search engine
+                  optimisation begins. We write content, optimise your website,
+                  advertise and monitor results - all in close collaboration
+                  with you, of course.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4 col-12">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="images/slike/icon-6.png"
+                alt="card icon"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Local SEO</h5>
+                <p class="card-text">
+                  Are you interested in gaining a lot of visibility in your
+                  immediate area? Many companies actively target customers in
+                  their immediate vicinity, and want to optimise their website
+                  and content primarily to reach a target audience in their
+                  local area. With local SEO, we can target this specific
+                  audience - so you reach the right people, at the right time.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4 col-12">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="images/slike/icon-4.png"
+                alt="card icon"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Reports</h5>
+                <p class="card-text">
+                  Of course, search engine optimisation needs to be monitored,
+                  so you know our techniques are working and you’re getting the
+                  results you want. We use your KPIs and produce reports that
+                  show you where you are, how close you are to your goal and how
+                  your visibility has changed since you started.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="header-h2">So what is Search Engine Optimization?</h2>
+          </div>
+          <div class="col-lg-3 col-12">
+            <p>
+              Search engine optimization is one of the most important things you
+              can do as a business owner today. With the help of search engine
+              optimised content, ads and websites, you can rank higher on search
+              engines and become your customers’ first choice. By search engine
+              optimizing your website, content and social channels.
+            </p>
+          </div>
+          <div class="col-lg-3 col-12">
+            <p>
+              Working with search engine optimization is something that many
+              people find difficult - but not us at Robotcode. With us, you can
+              get the help of skilled SEO specialists with years of experience
+              who can tailor your business to what your customers are searching
+              for, to help you increase your visibility and profitability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-5 seo-custom-5">
+      <div class="container">
+        <div class="row text-center mb-5">
+          <div class="col-12">
+            <h4 class="subtext color-orange text-uppercase">OUR WORK</h4>
+          </div>
+          <div class="col-12">
+            <h2 class="header-h2 color-white">Case Studies</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card red-darkRed">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-12">
+                      <h5>MEDIA</h5>
+                    </div>
+                    <div class="col-12">
+                      <h3>RADIO D / D+</h3>
+                    </div>
+                    <div class="col-12">
+                      <p>
+                        To create a website that reflects your image and values,
+                        we first need to know a little more about you and your
+                        business. Then we'll create a graphic profile and a
+                        design idea for you to approve.
+                      </p>
+                    </div>
+                    <div class="col-12">
+                      <a class="light-red" href="#"> view project </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                  <img src="images/slike/img-7.png" alt="placeholder" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card blue-darkBlue">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-12">
+                      <h5>tourism</h5>
+                    </div>
+                    <div class="col-12">
+                      <h3>HOTEL AUREL</h3>
+                    </div>
+                    <div class="col-12">
+                      <p>
+                        To create a website that reflects your image and values,
+                        we first need to know a little more about you and your
+                        business. Then we'll create a graphic profile and a
+                        design idea for you to approve.
+                      </p>
+                    </div>
+                    <div class="col-12">
+                      <a class="light-blue" href="#"> view project </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                  <img src="images/slike/img-8.png" alt="placeholder" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <a href="#" class="gradient-btn">View All Case Studies</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-2 seo-custom-2-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-12">
+                <h4 class="subtext color-orange">WHY CHOOSE US</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h2 class="header-h2">
+                  We help our clients to be visible on
+                  <span class="gradient-color" style="font-weight: bolder"
+                    >Google</span
+                  >
+                </h2>
+              </div>
+              <div class="col-lg-8 col-12">
+                <p>
+                  You could say that we are an seo agency - mainly because our
+                  expertise is in seo.Of course we do other things as well, but
+                  search engine optimization is very close to our hearts. That’s
+                  because we’ve been in the business long enough to understand
+                  which strategies are sustainable and which give the best
+                  results.
+                </p>
+              </div>
+              <div class="col-12 mt-4 btn-align">
+                <a href="#" class="gradient-btn"> Book a meeting with us </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex justify-content-end">
+            <img
+              src="images/slike/img-15.png"
+              alt="google logo icon"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-center custom-2-footer">
+          <div class="col-12 text-md-center text-start">
+            <h2 class="header-h2">
+              We are driven by results and by the success of our customers
+            </h2>
+          </div>
+          <div class="col-md-7 col-12 text-md-center text-start">
+            <p>
+              At Robotcode, we are driven by our customers’ success and we want
+              to help you achieve your goals, through business-oriented services
+              in SEO, web design, development, IT services and app development.
+              We have broad expertise in everything from being visible on
+              Google, to developing a successful e-commerce business.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- tech -->
+    <!-- <section class="custom-7">
+      <div class="container">
+        <div class="tech-header row text-center justify-content-center">
+          <div class="col-12">
+            <h2 class="header-h2">Technologies that we use</h2>
+          </div>
+          <div class="col-md-7 col-12">
+            <p class="color-black">
+              We have a wide range of previous experience under our belts. Want
+              to check out what we've helped our clients with? Here you can find
+              out what we've done to strengthen our past clients' brands through
+              great web design and smart development.
+            </p>
+          </div>
+        </div>
+        <div class="tech-body row">
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img src="images/slike/icon-11.png" alt="react library icon" />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>React</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img
+                src="images/slike/icon-10.png"
+                alt="angular framework logo icon"
+              />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>Angular</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img src="images/slike/icon-8.png" alt="react library icon" />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>VueJS</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img src="images/slike/icon-13.png" alt="react library icon" />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>Tailwind</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img src="images/slike/icon-16.png" alt="react library icon" />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>Python</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img src="images/slike/icon-14.png" alt="Wordpress logo icon" />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>WordPress</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img
+                src="images/slike/icon-12.png"
+                alt="ruby programming language icon"
+              />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>Ruby</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img
+                src="images/slike/icon-9.png"
+                alt="Laravel framwork logo icon"
+              />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>Laravel</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-12 d-flex align-items-center justify-content-center"
+          >
+            <div class="col-6 d-flex justify-content-end">
+              <img
+                src="images/slike/icon-15.png"
+                alt="Java programming language logo icon"
+              />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>Java</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section class="custom-8">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-12">
+            <img class="img-fluid" src="images/slike/img-4.png" alt="robot" />
+          </div>
+          <div class="col-lg-6 col-md-8 col-12">
+            <h2 class="color-white header-h2">
+              Create local <span class="gradient-color">visibility</span> and be
+              the first your customers see on
+              <span class="gradient-color">Google</span>
+            </h2>
+          </div>
+          <div class="col-12">
+            <a href="#" class="gradient-btn">Book a Meeting</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <h1>test</h1>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="vcard">
+              <span class="fn org d-none">Test</span>
+              <span class="tel d-none">Test</span>
+              <h5>Test</h5>
+              <p class="adr">
+                <span class="street-address">Test</span><br />
+                <span class="postal-code">Test</span><br />
+                <span class="locality">Test</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Test</h5>
+            <p>031 - 25 15 05</p>
+            <a href="<?= $contact ->url; ?>"
+              >Test<i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+          <div class="col-md-4 dash">
+            <h5>Test</h5>
+            <div class="character">
+              <p>Aleksa Luketa</p>
+              <a href="<?= $contact ->url; ?>"
+                >Test<i class="bi bi-arrow-right"></i
+              ></a>
+              <img
+                src="/site/templates/img/aleksa.png"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-text">
+          <div class="row">
+            <div class="col-md-5">
+              <ul class="navbar-nav">
+                <a href="https://www.linkedin.com/company/robotcodesweden/">
+                  <li>Linkedin</li>
+                </a>
+                <a href="https://www.instagram.com/robot.code/">
+                  <li>Instagram</li>
+                </a>
+                <a href="https://www.facebook.com/robotcode.me">
+                  <li>Facebook</li>
+                </a>
+              </ul>
+            </div>
+
+            <div class="col-md-5">
+              <p class="robot">
+                ©<span id="year"></span> RobotCode, All rights reserved.
+              </p>
+            </div>
+
+            <div class="col-md-2">
+              <p class="policy">
+                <a href="<?= $privacy ->url; ?>" style="color: #5a5961">Test</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- js -->
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelector("#read-more").addEventListener("click", () => {
+        document.querySelector(".bi-chevron-up").classList.toggle("rotate");
+      });
+    </script>
+  </body>
+</html>

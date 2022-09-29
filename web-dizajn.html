@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="se">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Design</title>
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div id="mobile">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a href="#">
+            <img src="images/logo.png" alt="#" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $about ->url; ?>"
+                  ><?= $about ->title; ?></a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $work ->url; ?>"
+                  ><?= $work ->title; ?></a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <div class="dropdown">
+                  <button
+                    class="dropdown-toggle nav-link header-links dropdown-style"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <?php echo __('Usluge');?>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="<?= $web_development ->url; ?>"
+                        ><?= $web_development ->title; ?></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="<?= $videography ->url; ?>"
+                        ><?= $videography ->title; ?></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="<?= $web_corporate_development ->url; ?>"
+                        ><?= $web_corporate_development ->title; ?></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $join ->url; ?>"
+                  ><?= $join ->title; ?></a
+                >
+              </li>
+              <?php foreach($languages as $l) : ?>
+              <!-- <li class="languages nav-item px-lg-3">
+                           <a class="nav-link header-links" href="<?php echo $page->localUrl($l);?>">
+                              <img class="justify-content-center align-self-center" src="<?php echo $config->urls->templates . 'img/icons/' . $l->title . '.png';?>" alt="<?php echo $l->title ?>">
+                           </a>
+                        </li>   -->
+              <?php startforeach; ?>
+            </ul>
+
+            <form class="d-flex px-lg-3" action="<?= $contact ->url; ?>">
+              <button class="btn" type="submit">
+                <?= $contact ->title; ?> <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <section class="custom-1">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 d-flex flex-column gap-1">
+            <div class="row">
+              <div class="col-12">
+                <h4 class="subtext color-orange">OUR SERVICES</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h1 class="text-capitalize color-white">
+                  web design & <span class="gradient-color">development</span>
+                </h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p class="color-white">
+                  Robotcode designs and develops responsive websites with fast
+                  conversions for successful companies that want the best of the
+                  best. We are a full service web agency in Gothenburg that
+                  helps you reach your full potential through good design,
+                  optimization and focus on results.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <a class="gradient-btn" href="#">Book a Consult</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img class="img-fluid" src="images/slike/img-2.png" alt="laptop" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="header-h2">Your website is your image</h2>
+          </div>
+          <div class="col-lg-3 col-12">
+            <p>
+              So it's important that it reflects your company and what you want
+              to convey to your customers. But your website doesn't just need to
+              have a good-looking design that is appealing to your target
+              audience, it also needs to work well and be
+              <span class="font-weight-bold">optimized</span> for different
+              devices
+            </p>
+            <p>
+              We create professional websites that are tailored to each client's
+              wishes and needs. We also take care of the technical side, so that
+              your website performs to today's exacting standards.
+            </p>
+            <p>
+              Fast load times, mobile responsiveness and good on page
+              <span class="font-weight-bold">SEO</span> are just as important as
+              good design we know that and that's why our process looks the way
+              it does.
+            </p>
+          </div>
+          <div class="col-lg-3 col-12">
+            <p>
+              Our team consists of a mix of
+              <span class="font-weight-bold">UI/UX designers</span>, web
+              designers and web developers who work together to create the most
+              optimized website possible for our clients. We take care of the
+              entire process for you - from planning, to implementation and
+              launch.
+            </p>
+            <p>
+              Using a data-driven development methodology, we also ensure that
+              your website works in the best possible way. The technical part
+              behind a well functioning website lays the foundation for how the
+              website is received by visitors - which is precisely why we place
+              great emphasis on making sure your website is responsive and
+              perfect in every way. We create a successful web project by paying
+              attention to all the elements.
+            </p>
+          </div>
+          <div class="col-12">
+            <button
+              id="read-more"
+              type="button"
+              class="gradient-btn d-md-none d-block"
+              data-toggle="collapse"
+              data-target="#demo"
+            >
+              Read More
+              <i class="bi bi-chevron-up"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- read more -->
+      <div id="demo" class="collapse read-more">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p>
+                Our team consists of a mix of
+                <span class="font-weight-bold">UI/UX designers</span>, web
+                designers and web developers who work together to create the
+                most optimized website possible for our clients. We take care of
+                the entire process for you - from planning, to implementation
+                and launch.
+              </p>
+              <p>
+                Using a data-driven development methodology, we also ensure that
+                your website works in the best possible way. The technical part
+                behind a well functioning website lays the foundation for how
+                the website is received by visitors - which is precisely why we
+                place great emphasis on making sure your website is responsive
+                and perfect in every way. We create a successful web project by
+                paying attention to all the elements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-3">
+      <div class="container">
+        <div class="row align-items-center flex-md-row flex-column-reverse">
+          <div class="col-md-6 d-flex flex-column gap-1">
+            <div class="row">
+              <div class="col-12">
+                <h4 class="subtext color-orange text-uppercase">our process</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h2 class="color-white header-h2">
+                  How does the <span class="gradient-color">process</span> work
+                </h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p class="color-white">
+                  When we develop apps, we combine our common skills to create
+                  something unique all the time. Together with our clients, we
+                  develop a plan, where everything from design to system
+                  integrations is reviewed to create a blueprint for the entire
+                  process. We are also with you throughout the process, from
+                  start to finish. When we help our clients to design, you could
+                  say that we work in three stages.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img class="img-fluid" src="images/slike/img-3.png" alt="laptop" />
+          </div>
+        </div>
+        <div class="cards row justify-content-between">
+          <div class="col-lg-3 col-12">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="images/slike/icon-5.png"
+                alt="card icon"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Planning.</h5>
+                <p class="card-text">
+                  To create a website that reflects your image and values, we
+                  first need to know a little more about you and your business.
+                  Then we'll create a graphic profile and a design idea for you
+                  to approve. All of this is done in consultation with you as
+                  the client, it is important to us that we work closely
+                  together and have a good relationship so that we can meet your
+                  needs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="images/slike/icon-6.png"
+                alt="card icon"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Implementation.</h5>
+                <p class="card-text">
+                  Once we agree on a design and a concept, we start creating. We
+                  design and develop a well-functioning website that has all the
+                  features you need. We'll also make sure the technical bits
+                  fall into place, so your customers get a flawless website with
+                  short load times and fast conversions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="images/slike/icon-4.png"
+                alt="card icon"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Launch.</h5>
+                <p class="card-text">
+                  Once we've fine-tuned everything and carried out the necessary
+                  tests to make sure your website is as good as it can be - then
+                  it's time to launch it. Of course, we'll be here for you
+                  throughout the process and help you if anything goes wrong.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="text-uppercase subtext color-orange">our work</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h2 class="header-h2">Case Studies</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-12">
+            <p>
+              We have a wide range of previous experience under our belts. Want
+              to check out what we've helped our clients with? Here you can find
+              out what we've done to strengthen our past clients' brands through
+              great web design and smart development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card red-darkRed">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-12">
+                      <h5>MEDIA</h5>
+                    </div>
+                    <div class="col-12">
+                      <h3>RADIO D / D+</h3>
+                    </div>
+                    <div class="col-12">
+                      <p>
+                        To create a website that reflects your image and values,
+                        we first need to know a little more about you and your
+                        business. Then we'll create a graphic profile and a
+                        design idea for you to approve.
+                      </p>
+                    </div>
+                    <div class="col-12">
+                      <a class="light-red" href="#"> view project </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                  <img src="images/slike/img-7.png" alt="placeholder" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card blue-darkBlue">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-12">
+                      <h5>tourism</h5>
+                    </div>
+                    <div class="col-12">
+                      <h3>HOTEL AUREL</h3>
+                    </div>
+                    <div class="col-12">
+                      <p>
+                        To create a website that reflects your image and values,
+                        we first need to know a little more about you and your
+                        business. Then we'll create a graphic profile and a
+                        design idea for you to approve.
+                      </p>
+                    </div>
+                    <div class="col-12">
+                      <a class="light-blue" href="#"> view project </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                  <img src="images/slike/img-8.png" alt="placeholder" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card yellow-darkYellow">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-12">
+                      <h5>CARS</h5>
+                    </div>
+                    <div class="col-12">
+                      <h3>AUTOSHOP ONLINE</h3>
+                    </div>
+                    <div class="col-12">
+                      <p>
+                        To create a website that reflects your image and values,
+                        we first need to know a little more about you and your
+                        business. Then we'll create a graphic profile and a
+                        design idea for you to approve.
+                      </p>
+                    </div>
+                    <div class="col-12">
+                      <a class="light-yellow" href="#"> view project </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                  <img src="images/slike/img-9.png" alt="placeholder" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-12 text-center">
+                <img
+                  clas
+                  src="images/slike/img-5.png"
+                  alt="robot"
+                  class="img-fluid robot-mockup"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <a href="#" class="gradient-btn">View All Case Studies</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-6">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="testimonial-btn active-test" target="1">
+              <img src="images/slike/icon-17.png" alt="Radio D logo icon" />
+              <span class="d-flex flex-column">
+                <h5>RADIO D / D+</h5>
+                <p>Sanda Rakocevic</p>
+              </span>
+            </div>
+            <div class="testimonial-btn" target="2">
+              <img src="images/slike/icon-18.png" alt="Radio D logo icon" />
+              <span class="d-flex flex-column">
+                <h5>HOTEL AUREL</h5>
+                <p>
+                  Milica I Ivana, <br />
+                  menadžment hotela Aurel
+                </p>
+              </span>
+            </div>
+            <div class="testimonial-btn" target="3">
+              <img src="images/slike/icon-19.png" alt="Radio D logo icon" />
+              <span class="d-flex flex-column">
+                <h5>AUTOSHOP ONLINE</h5>
+                <p>Founder at XYZ Works</p>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div id="div1" class="target">
+              “Cooperation with the digital marketing company Robot Code is one
+              of those we are especially pleased with. Moreover, for that
+              reason, it continued after the creation of sites for Radio D and
+              Radio D Plus. What we especially liked is that the company employs
+              young, innovative and creative people who, following global trends
+              in the field of digital marketing, work on creating perfect
+              marketing solutions, and thus the companies they work with keep up
+              with the times. The peculiarity of our cooperation is that even
+              after the agreed part of the work, the employees of this company
+              are always available for any questions in the field of their use,
+              which further improves our presentation to target groups of
+              listeners and customers. Aware that there are a large number of
+              companies on the market with the same or similar activity, as the
+              most listened to, we chose to cooperate with the BEST AND MOST
+              PROFESSIONAL. Our choice and proposal to you is ROBOT CODE -
+              because mutual satisfaction builds business success.”
+            </div>
+            <div id="div2" class="target" style="display: none">
+              "We motivate ourselves by the satisfaction of our customers, and
+              it is by that merit that we are recognized and distinguished from
+              others. There is nothing greater than hearing the amazing feedback
+              we get from our customers: “Working with Robot Code was a real
+              pleasure for us. They are a team of young, responsible, and
+              creative people with complete dedication to their work. Every
+              single one of our requests were swiftly fulfilled utilizing
+              innovative and original solutions that best fit what we do. I
+              would like to put an emphasis on the fact that the communication
+              between us and every member of the team has been seamlessly
+              efficient. Every question we had for the team was perfectly
+              responded to.”
+            </div>
+            <div id="div3" class="target" style="display: none">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+              cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+              laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+              on it squid single-origin coffee nulla assumenda shoreditch et.
+              Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+              nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+              lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them
+              accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-7">
+      <div class="container">
+        <div class="tech-header row text-center justify-content-center">
+          <div class="col-12">
+            <h2 class="header-h2">Technologies that we use</h2>
+          </div>
+          <div class="col-md-7 col-12">
+            <p class="color-black">
+              We have a wide range of previous experience under our belts. Want
+              to check out what we've helped our clients with? Here you can find
+              out what we've done to strengthen our past clients' brands through
+              great web design and smart development.
+            </p>
+          </div>
+        </div>
+        <div class="tech-body row">
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img src="images/slike/icon-11.png" alt="react library icon" />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>React</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img
+                src="images/slike/icon-10.png"
+                alt="angular framework logo icon"
+              />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>Angular</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img src="images/slike/icon-8.png" alt="react library icon" />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>VueJS</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img src="images/slike/icon-13.png" alt="react library icon" />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>Tailwind</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img src="images/slike/icon-16.png" alt="react library icon" />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>Python</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img src="images/slike/icon-14.png" alt="Wordpress logo icon" />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>WordPress</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img
+                src="images/slike/icon-12.png"
+                alt="ruby programming language icon"
+              />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>Ruby</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-6 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-6 d-flex justify-content-md-end justify-content-start pr-0"
+            >
+              <img
+                src="images/slike/icon-9.png"
+                alt="Laravel framwork logo icon"
+              />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>Laravel</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-12 d-flex align-items-center justify-content-center"
+          >
+            <div class="col-6 d-flex justify-content-end">
+              <img
+                src="images/slike/icon-15.png"
+                alt="Java programming language logo icon"
+              />
+            </div>
+            <div class="col-6 d-flex justify-content-start tech-content">
+              <p>Java</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-8">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-12">
+            <img class="img-fluid" src="images/slike/img-4.png" alt="robot" />
+          </div>
+          <div class="col-lg-6 col-md-8 col-12">
+            <h2 class="color-white header-h2">
+              We combine good web design with high-tech development to create
+              innovative and effective websites.
+            </h2>
+          </div>
+          <div class="col-12">
+            <a href="#" class="gradient-btn">Book a Meeting</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <h1>test</h1>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="vcard">
+              <span class="fn org d-none">Test</span>
+              <span class="tel d-none">Test</span>
+              <h5>Test</h5>
+              <p class="adr">
+                <span class="street-address">Test</span><br />
+                <span class="postal-code">Test</span><br />
+                <span class="locality">Test</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Test</h5>
+            <p>031 - 25 15 05</p>
+            <a href="<?= $contact ->url; ?>"
+              >Test<i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+          <div class="col-md-4 dash">
+            <h5>Test</h5>
+            <div class="character">
+              <p>Aleksa Luketa</p>
+              <a href="<?= $contact ->url; ?>"
+                >Test<i class="bi bi-arrow-right"></i
+              ></a>
+              <img
+                src="/site/templates/img/aleksa.png"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-text">
+          <div class="row">
+            <div class="col-md-5">
+              <ul class="navbar-nav">
+                <a href="https://www.linkedin.com/company/robotcodesweden/">
+                  <li>Linkedin</li>
+                </a>
+                <a href="https://www.instagram.com/robot.code/">
+                  <li>Instagram</li>
+                </a>
+                <a href="https://www.facebook.com/robotcode.me">
+                  <li>Facebook</li>
+                </a>
+              </ul>
+            </div>
+
+            <div class="col-md-5">
+              <p class="robot">
+                ©<span id="year"></span> RobotCode, All rights reserved.
+              </p>
+            </div>
+
+            <div class="col-md-2">
+              <p class="policy">
+                <a href="<?= $privacy ->url; ?>" style="color: #5a5961">Test</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- js -->
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(".testimonial-btn").click(function () {
+        $(this).addClass("active-test").siblings().removeClass("active-test");
+        $(".target").hide();
+        $("#div" + $(this).attr("target")).show(1000);
+      });
+      document.querySelector("#read-more").addEventListener("click", () => {
+        document.querySelector(".bi-chevron-up").classList.toggle("rotate");
+      });
+    </script>
+  </body>
+</html>
