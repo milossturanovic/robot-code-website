@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website-page</title>
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -305,25 +308,19 @@
 
 
             <div class="items">
-
                 <div class='slide'>
-                    <a href='{$projects->linking}' target='_blank'><img src='images/portfolio_1.webp'
-                            alt='Portoflio RobotCode' loading='lazy'></a>
+                    <img src='images/portfolio_1.webp'alt='Portoflio RobotCode' loading='lazy'>
                 </div>
                 <div class='slide'>
-                    <a href='{$projects->linking}' target='_blank'><img src='images/portfolio_2.webp'
-                            alt='Portoflio RobotCode' loading='lazy'></a>
+                    <img src='images/portfolio_2.webp'alt='Portoflio RobotCode' loading='lazy'>
                 </div>
                 <div class='slide'>
-                    <a href='{$projects->linking}' target='_blank'><img src='images/portfolio_3.webp'
-                            alt='Portoflio RobotCode' loading='lazy'></a>
+                    <img src='images/portfolio_3.webp'alt='Portoflio RobotCode' loading='lazy'>
                 </div>
                 <div class='slide'>
-                    <a href='{$projects->linking}' target='_blank'><img src='images/portfolio_4.webp'
-                            alt='Portoflio RobotCode' loading='lazy'></a>
+                    <img src='images/portfolio_4.webp'alt='Portoflio RobotCode' loading='lazy'>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -416,59 +413,61 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
 
     <script src="js/main.js"></script>
 
+    <!-- Slider for portfolio -->
+    <script src="js/slider.js"></script>
+
+   
     <script>
         jQuery(document).ready(function () {
-            jQuery('.items').slick({
-                dots: false,
-                arrows: false,
-                centerMode: false,
-                centerPadding: '100px',
-                slidesToShow: 1,
-                arrows: true,
-                mobileFirst: true,
-                autoplay: false,
-                responsive: [{
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                    }
-                },
+    jQuery('.items').slick({
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        centerPadding: '100px',
+        slidesToShow: 1,
+        arrows: true,
+        mobileFirst: true,
+        autoplay: false,
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+            }
+        },
 
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 500,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
-                ]
-            })
-        });
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    })
+});
     </script>
-
 
 
 </body>
