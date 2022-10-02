@@ -3390,10 +3390,26 @@ footer a {
   background-color: #EFEFEF;
 }
 
+
+.background-gray-2{
+  background-color: #d8d7d7;
+}
+
+.background-pink{
+  background-color: #FE94A4;
+}
+
 .offset-image{
   position: relative;
   bottom: 16rem;
 }
+
+
+.offset-image-10{
+  position: relative;
+  bottom: 10rem;
+}
+
 
 
 .spacing-200{
@@ -3438,6 +3454,10 @@ footer a {
 
   .spacing-500{
     height: 500px;
+  }
+
+  .spacing-700{
+    height: 700px;
   }
 
   .spacing-700{
