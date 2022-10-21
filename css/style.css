@@ -2734,22 +2734,22 @@ footer a {
 }
 /* section 1 end */
 /* app custom 1 */
-  .app-custom-1 {
-    padding: 4rem 0;
-  }
-  .app-custom-1 img {
-    margin-bottom: -15rem;
-  }
+.app-custom-1 {
+  padding: 4rem 0;
+}
+.app-custom-1 img {
+  margin-bottom: -15rem;
+}
 /* app custom 1 end */
 
 /* commerce section 1 */
-  .commerce-custom-1 {
-    padding: 3% 0;
-  }
+.commerce-custom-1 {
+  padding: 3% 0;
+}
 
-  .commerce-custom-1 img {
-    margin-bottom: -15rem;
-  }
+.commerce-custom-1 img {
+  margin-bottom: -15rem;
+}
 /* commerce section 1 end */
 
 /* section 2 */
@@ -2813,9 +2813,6 @@ footer a {
 /* seo custom 2 end*/
 
 /* seo custom 2-2 */
-.seo-custom-2-2 img {
-  margin-right: -10rem;
-}
 
 .custom-2-footer {
   margin: 10%;
@@ -2832,7 +2829,7 @@ footer a {
 }
 
 .custom-3 img {
-  margin-top: -5rem;
+  margin-top: -2rem;
 }
 
 .custom-3 h4 {
@@ -2881,12 +2878,12 @@ footer a {
 }
 
 .commerce-custom-3 .card {
-  min-height: 395px;
+  min-height: 100%;
 }
 
 .commerce-custom-3 img {
-  margin-bottom: -20rem;
-  width: 65%;
+  /* margin-bottom: -20rem; */
+  width: 100%;
 }
 
 .commerce-footer {
@@ -2899,9 +2896,9 @@ footer a {
   padding-top: 4%;
 }
 
-.seo-custom-3 img {
+/* .seo-custom-3 img {
   margin-top: -18rem;
-}
+} */
 /* seo custom 3 end*/
 
 /* section 3 consult */
@@ -2912,7 +2909,7 @@ footer a {
   position: absolute;
   inset: 0;
 
-  background: url(../images/slike/bg-3.png) no-repeat top left;
+  background: url(/site/assets/files/1454/bg-3.png) no-repeat top left;
   background-size: 90%;
 
   z-index: 1;
@@ -3229,8 +3226,8 @@ footer a {
   .custom-2 {
     padding: 10% 0;
   }
-  .custom-2::after {
-    background: none;
+  .custom-2 {
+    background: none !important;
   }
   .custom-5 .card {
     padding: 0 1rem;
@@ -3273,18 +3270,17 @@ footer a {
     margin-right: 0;
     margin-top: 3rem;
     object-fit: contain;
-
   }
   .custom-3 .col-lg-3 {
     margin-bottom: 1rem;
   }
   .commerce-custom-3 img {
     margin: 0 auto;
-    margin-bottom: -6rem;
+    /* margin-bottom: -6rem; */
   }
-  .seo-custom-3 img {
+  /* .seo-custom-3 img {
     margin-top: -28rem;
-  }
+  } */
   .custom-5::after,
   .custom-3-consult::after {
     display: none;
@@ -3297,6 +3293,11 @@ footer a {
   }
   .custom-7 img {
     filter: grayscale(0%);
+  }
+
+  .img-offscreen {
+    position: relative !important;
+    bottom: 4rem !important;
   }
 }
 
@@ -3327,14 +3328,19 @@ footer a {
   .custom-3 {
     padding-bottom: 10%;
   }
-  .custom-3 img {
+  /* .custom-3 img {
     margin-top: -8rem;
+  } */
+
+  .custom-3 img {
+    margin-top: -1rem;
   }
+
   .seo-custom-3 img {
     margin-top: -5rem;
   }
   .commerce-custom-3 img {
-    margin-bottom: -5rem;
+    /* margin-bottom: -5rem; */
     margin-top: 5rem;
     width: 100%;
   }
@@ -3380,97 +3386,78 @@ footer a {
 
 /* new code 29.09 */
 
-.gray-background{
-  background-color: #E5E5E5;
-
+.gray-background {
+  background-color: #e5e5e5;
 }
 
-
-.background-gray-light{
-  background-color: #EFEFEF;
+.background-gray-light {
+  background-color: #efefef;
 }
 
-
-.background-gray-2{
+.background-gray-2 {
   background-color: #d8d7d7;
 }
 
-.background-pink{
-  background-color: #FE94A4;
+.background-pink {
+  background-color: #fe94a4;
 }
 
-.offset-image{
+.offset-image {
   position: relative;
   bottom: 16rem;
 }
 
-
-.offset-image-10{
+.offset-image-10 {
   position: relative;
   bottom: 10rem;
 }
 
-
-
-.spacing-200{
+.spacing-200 {
   height: 200px;
 }
 
-
-.spacing-300{
+.spacing-300 {
   height: 300px;
 }
 
-
-
-.w-md-50{
- width: 50%;
+.w-md-50 {
+  width: 50%;
 }
-
 
 @media (max-width: 992px) {
-
-  .w-md-50{
+  .w-md-50 {
     width: 100%;
   }
-  
-
 }
 
-
-
-
-
-
-
 @media (min-width: 1200px) {
-  .width-1000{
+  .width-1000 {
     width: 1000px !important;
   }
 
-  .width-700{
+  .width-700 {
     width: 700px !important;
   }
 
-  .spacing-500{
+  .spacing-500 {
     height: 500px;
   }
 
-  .spacing-700{
+  .spacing-700 {
     height: 700px;
   }
 
-  .spacing-700{
+  .spacing-700 {
     height: 789px;
   }
 
-  .margin-top-11{
-    top:11rem;
-    position: relative; 
+  .margin-top-11 {
+    top: 11rem;
+    position: relative;
   }
 
-  .margin-bottom-13{
-    bottom:13rem;
-    position: relative; 
+  .margin-bottom-13 {
+    bottom: 13rem;
+    position: relative;
   }
 }
