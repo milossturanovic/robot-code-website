@@ -219,6 +219,7 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  height: 100% !important;
 }
 
 .card_content {
@@ -1847,11 +1848,20 @@ footer a {
   .modal-dialog {
     max-width: 70%;
   }
+  .silver-border{
+    height: 140px !important;
+ 
+  }
 }
 
 @media (max-width: 1024px) {
   .modal-dialog {
     max-width: 70%;
+  }
+
+  .silver-border{
+    height: 50px !important;
+ 
   }
 }
 
@@ -1917,6 +1927,8 @@ footer a {
   #clients .client-logo {
     padding: 30px;
   }
+
+ 
 }
 
 .scale-btn {
@@ -2513,6 +2525,10 @@ footer a {
   .items {
     max-width: 90%;
   }
+
+  .mt-12 {
+    margin-top: 4rem;
+  }
 }
 
 .slick-prev::before {
@@ -2529,6 +2545,15 @@ footer a {
 
 .slick-next {
   right: -5rem;
+}
+
+.font-large{
+  font-size: 80px;
+}
+
+.silver-border{
+  height: 160px;
+  background-color: #F6F6F6;
 }
 
 .slick-next::before {
@@ -3166,6 +3191,31 @@ footer a {
   color: #fff;
 }
 
+
+.ml-8 {
+  margin-left: 8rem;
+}
+
+.text-30{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.bl-purple{
+  border-left: 2px solid #5215fc;
+  padding-left: 1rem;
+}
+
+.post-relative{
+  position: relative;
+top: 7rem;
+}
+
+.height-600{
+  height: 600px;
+}
+
 /* section 10 end */
 /* consult page end */
 
@@ -3180,6 +3230,12 @@ footer a {
   .custom-5 .robot-mockup {
     right: 5rem;
   }
+
+  .ml-8 {
+    margin-left: 0rem;
+  }
+  
+  
 }
 @media (max-width: 1300px) {
   .seo-custom-1 {
@@ -3221,6 +3277,18 @@ footer a {
   .custom-5::after {
     background-size: 90%;
   }
+
+
+  .post-relative{
+    position:  relative;
+    top: 2rem !important;
+    width: 50%;
+  }
+
+
+  .font-large{
+    font-size: 2.5rem;
+  }
 }
 @media (max-width: 990px) {
   .custom-2 {
@@ -3252,6 +3320,17 @@ footer a {
     position: static;
     width: 100%;
   }
+
+  .post-relative{
+    position:  relative;
+    top: 2rem !important;
+    width: 70%;
+  }
+
+  .height-600{
+    height: 440px;
+  }
+  
 }
 
 @media (max-width: 850px) {
@@ -3298,6 +3377,12 @@ footer a {
   .img-offscreen {
     position: relative !important;
     bottom: 4rem !important;
+  }
+
+  .post-relative{
+    position:  relative;
+    top: 2rem !important;
+    width: 50%;
   }
 }
 
@@ -3379,6 +3464,11 @@ footer a {
   }
   .custom-9 a {
     display: none;
+  }
+  .post-relative{
+    position:  relative;
+    top: 2rem !important;
+    width: 80%;
   }
 }
 /* responsive end */
