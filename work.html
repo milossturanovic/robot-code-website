@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website-page</title>
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div id="mobile">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a href="#">
+                    <img src="images/logo.png" alt="#" />
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                        <li class="nav-item px-lg-3">
+                            <a class="nav-link header-links" href="<?= $about ->url; ?>">O nama</a>
+                        </li>
+                        <li class="nav-item px-lg-3">
+                            <a class="nav-link header-links" href="<?= $work ->url; ?>">Radovi</a>
+                        </li>
+                        <li class="nav-item px-lg-3">
+                            <div class="dropdown">
+                                <button class="dropdown-toggle nav-link header-links dropdown-style" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <?php echo __('Usluge');?>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li>
+                                        <a class="dropdown-item" href="<?= $web_development ->url; ?>">Usluge</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="<?= $videography ->url; ?>">
+                                            Videografija
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="<?= $web_corporate_development ->url; ?>">
+                                            <?= $web_corporate_development ->title; ?>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item px-lg-3">
+                            <a class="nav-link header-links" href="<?= $join ->url; ?>">
+                                <?= $join ->title; ?>
+                            </a>
+                        </li>
+                        <?php foreach($languages as $l) : ?>
+                        <!-- <li class="languages nav-item px-lg-3">
+                           <a class="nav-link header-links" href="<?php echo $page->localUrl($l);?>">
+                              <img class="justify-content-center align-self-center" src="<?php echo $config->urls->templates . 'img/icons/' . $l->title . '.png';?>" alt="<?php echo $l->title ?>">
+                           </a>
+                        </li>   -->
+                        <?php startforeach; ?>
+                    </ul>
+
+                    <form class="d-flex px-lg-3" action="<?= $contact ->url; ?>">
+                        <button class="btn" type="submit">
+                            <?= $contact ->title; ?> <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid px-md-5 pt-5">
+        <h1 class="header-h2">
+            <div class="col-lg-5 col-12 pl-md-1 pl-0 aos-init" data-aos="fade-right" data-aos-offset="300"
+                data-aos-easing="ease-in-sine" data-aos-duration="900">
+                Naša rješenja transformišu biznise, partnerstva i zajednice. </div>
+
+        </h1>
+    </div>
+
+
+   
+
+
+    <section id="projects" class="silver-color no-overflow">
+        <div class="container  px-md-5 pt-md-0 p-5 mt-5 no-overflow">
+
+
+
+
+
+
+
+
+
+
+            
+
+
+            <h2>PORTFOLIO</h2>
+            <div id="myBtnContainer">
+              <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+              <button class="btn" onclick="filterSelection('ecommerce')">E-commerce</button>
+              <button class="btn" onclick="filterSelection('mobile-app')">Mobilna aplikacija</button>
+              <button class="btn" onclick="filterSelection('web')">Web razvoj</button>
+              <button class="btn" onclick="filterSelection('digital-marketing')">Digitalni marketing</button>
+            </div>
+            
+       
+            <div class="main">
+                <ul class="cards">
+
+
+
+                    <li class="cards-item column ecommerce ">
+                        <div class="card aos-init aos-animate" data-aos="flip-right">
+                            <a href="/wallbo-prodavnica/" target="_self">
+                            </a>
+                            <div class="card_image"><a href="/wallbo-prodavnica/" target="_self">
+
+                                    <img loading="lazy" src="images/works/wallbo-thumbnail.png">
+                                    <div class="top-left">E-trgovina</div>
+                                    <div class="card-left">Wallbo</div>
+                                </a>
+                                <div class="overlay"><a href="/wallbo-prodavnica/" target="_self">
+                                        <div class="overlay-top-left">E-trgovina</div>
+                                        <div class="overlay-card-left">Wallbo</div>
+                                        <div class="text-card-left">Wallbo pravi poštanske sandučiće koji su izdržljivi
+                                            i daju vam kontrolu nad vašom poštom i paketima.</div>
+
+                                    </a>
+                                    <p class="link-card-left"><a href="/wallbo-prodavnica/" target="_self">
+                                        </a><a class="link-color" href="/wallbo-prodavnica/"> O projektu</a>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                            <!-- DIV CIERRA "CARD_IMAGE" -->
+
+
+                            <!-- DIV CIERRA "card_content" -->
+                        </div>
+                    </li>
+
+
+
+
+                    <li class="cards-item column mobile-app">
+                        <div class="card aos-init aos-animate" data-aos="flip-right">
+                            <a href="/nemam-ti-kad/" target="_self">
+                            </a>
+                            <div class=" card_image"><a href="/nemam-ti-kad/" target="_self">
+
+                                    <img loading="lazy" src="images/works/nemam-ti-kad-thumbnail.webp">
+                                    <div class="top-left">MOBILNA APLIKACIJA</div>
+                                    <div class="card-left">Nemam ti kad</div>
+                                </a>
+                                <div class="overlay"><a href="/nemam-ti-kad/" target="_self">
+                                        <div class="overlay-top-left">MOBILNA APLIKACIJA</div>
+                                        <div class="overlay-card-left">Nemam ti kad</div>
+                                        <div class="text-card-left">Platforma koja je omogućila velikim i malim
+                                            biznisima da se osjećaju podjednako bitnim...</div>
+
+                                    </a>
+                                    <p class="link-card-left"><a href="/nemam-ti-kad/" target="_self">
+                                        </a><a class="link-color" href="/nemam-ti-kad/"> O projektu</a>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                            <!-- DIV CIERRA "CARD_IMAGE" -->
+
+
+                            <!-- DIV CIERRA "card_content" -->
+                        </div>
+                    </li>
+
+
+
+
+                    <li class="cards-item column mobile-app">
+                        <div class="card aos-init aos-animate" data-aos="flip-right">
+                            <a href="/sve-za-zenu" target="_self">
+                            </a>
+                            <div class="card_image"><a href="/sve-za-zenu" target="_self">
+
+                                    <img loading="lazy"
+                                        src="images/works/robot_code_izrada_sajta_digitalni_marketing_sve_za_zenu.webp">
+                                    <div class="top-left">MOBILNA APLIKACIJA</div>
+                                    <div class="card-left">Sve za ženu</div>
+                                </a>
+                                <div class="overlay"><a href="/sve-za-zenu" target="_self">
+                                        <div class="overlay-top-left">MOBILNA APLIKACIJA</div>
+                                        <div class="overlay-card-left">Sve za ženu</div>
+                                        <div class="text-card-left">Platforma Sve za ženu kreirana je za nju - ženu, za
+                                            njenu laganiju svakodnevicu...</div>
+
+                                    </a>
+                                    <p class="link-card-left"><a href="/sve-za-zenu" target="_self">
+                                        </a><a class="link-color" href="/sve-za-zenu"> O projektu</a>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                            <!-- DIV CIERRA "CARD_IMAGE" -->
+
+
+                            <!-- DIV CIERRA "card_content" -->
+                        </div>
+                    </li>
+
+
+
+
+                    <li class="cards-item column web">
+                        <div class="card aos-init" data-aos="flip-right">
+                            <a href="/hotel-aurel/" target="_self">
+                            </a>
+                            <div class=" card_image"><a href="/hotel-aurel/" target="_self">
+
+                                    <img loading="lazy"
+                                        src="images/works/robot_code_izrada_sajta_digitalni_marketing_aurel.webp">
+                                    <div class="top-left">WEB RAZVOJ</div>
+                                    <div class="card-left">Aurel</div>
+                                </a>
+                                <div class="overlay"><a href="/hotel-aurel/" target="_self">
+                                        <div class="overlay-top-left">WEB RAZVOJ</div>
+                                        <div class="overlay-card-left">Aurel</div>
+                                        <div class="text-card-left">Hotel Aurel obećava boravak za pamćenje. Smješten u
+                                            novoizgrađenoj poslovnoj zoni Podgorice, udaljen samo 1 km od centra grada,
+                                            idealan je...</div>
+
+                                    </a>
+                                    <p class="link-card-left"><a href="/hotel-aurel/" target="_self">
+                                        </a><a class="link-color" href="/hotel-aurel/"> O projektu</a>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                            <!-- DIV CIERRA "CARD_IMAGE" -->
+
+
+                            <!-- DIV CIERRA "card_content" -->
+                        </div>
+                    </li>
+
+
+
+
+                    <li class="cards-item column web ">
+                        <div class="card aos-init" data-aos="flip-right">
+                            <a href="/carevici-farma" target="_self">
+                            </a>
+                            <div class="card_image"><a href="/carevici-farma" target="_self">
+
+                                    <img loading="lazy"
+                                        src="images/works/robot_code_izrada_sajta_digitalni_marketing_carevic.webp">
+                                    <div class="top-left">WEB RAZVOJ / DIGITALNI MARKETING</div>
+                                    <div class="card-left">Carevići</div>
+                                </a>
+                                <div class="overlay"><a href="/carevici-farma" target="_self">
+                                        <div class="overlay-top-left">WEB RAZVOJ / DIGITALNI MARKETING</div>
+                                        <div class="overlay-card-left">Carevići</div>
+                                        <div class="text-card-left">Daleko od gradske gužve… Pronađi svoju oazu mira.
+                                            Restoran je počeo sa radom u septembru 2020 god nalazi se na imanju...</div>
+
+                                    </a>
+                                    <p class="link-card-left"><a href="/carevici-farma" target="_self">
+                                        </a><a class="link-color" href="/carevici-farma"> O projektu</a>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                            <!-- DIV CIERRA "CARD_IMAGE" -->
+
+
+                            <!-- DIV CIERRA "card_content" -->
+                        </div>
+                    </li>
+
+
+
+
+                    <li class="cards-item column web ">
+                        <div class="card aos-init" data-aos="flip-right">
+                            <a href="/radio-d" target="_self">
+                            </a>
+                            <div class="card_image"><a href="/radio-d" target="_self">
+
+                                    <img loading="lazy"
+                                        src="images/works/robot_code_izrada_sajta_digitalni_marketing_radio_d.webp">
+                                    <div class="top-left">WEB RAZVOJ</div>
+                                    <div class="card-left">Radio D/D+</div>
+                                </a>
+                                <div class="overlay"><a href="/radio-d" target="_self">
+                                        <div class="overlay-top-left">WEB RAZVOJ</div>
+                                        <div class="overlay-card-left">Radio D/D+</div>
+                                        <div class="text-card-left">Slušajte zabavnu muziku na radio stanici koja je za
+                                            dvije decenije postojanja postala jedna od najslušanijih na ex yu
+                                            području...</div>
+
+                                    </a>
+                                    <p class="link-card-left"><a href="/radio-d" target="_self">
+                                        </a><a class="link-color" href="/radio-d"> O projektu</a>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                            <!-- DIV CIERRA "CARD_IMAGE" -->
+
+
+                            <!-- DIV CIERRA "card_content" -->
+                        </div>
+                    </li>
+
+
+
+
+                    <li class="cards-item column web">
+                        <div class="card aos-init" data-aos="flip-right">
+                            <a href="/meat" target="_self">
+                            </a>
+                            <div class="card_image"><a href="/meat" target="_self">
+
+                                    <img loading="lazy"
+                                        src="images/works/robot_code_izrada_sajta_digitalni_marketing_meat.webp">
+                                    <div class="top-left">WEB RAZVOJ / DIGITALNI MARKETING</div>
+                                    <div class="card-left">Meat</div>
+                                </a>
+                                <div class="overlay"><a href="/meat" target="_self">
+                                        <div class="overlay-top-left">WEB RAZVOJ / DIGITALNI MARKETING</div>
+                                        <div class="overlay-card-left">Meat</div>
+                                        <div class="text-card-left">Ukoliko ste umorni od vremena provedenog uz šporet
+                                            onda je vrijeme da nas posjetite i sa...</div>
+
+                                    </a>
+                                    <p class="link-card-left"><a href="/meat" target="_self">
+                                        </a><a class="link-color" href="/meat"> O projektu</a>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                            <!-- DIV CIERRA "CARD_IMAGE" -->
+
+
+                            <!-- DIV CIERRA "card_content" -->
+                        </div>
+                    </li>
+
+
+
+
+
+
+
+
+                </ul>
+                <!-- DIV CIERRA "UL" -->
+
+
+            </div>
+            <!-- DIV CIERRA "main" -->
+        </div>
+
+    </section>
+
+
+    <section id="partner" class="container-fluid">
+        <h2 class="text-center pt-6 pb-5 header-h2">Želite da budete naš sledeći klijent?</h2>
+
+        <div class="col text-center pb-6">
+            <form class="d-flex px-lg-3 justify-content-center" action="/kontakt">
+                <button class="btn" type="submit">ZAKAŽITE RAZGOVOR<i class="bi bi-arrow-right"></i></button>
+            </form>
+        </div>
+
+
+    </section>
+
+
+
+    <div class="silver-color">
+
+
+        <img loading="lazy" src="/images/works/robot_code_izrada_sajta_digitalni_marketing_slika_3.webp"
+            class="img-fluid mx-auto d-block" alt="">
+    </div>
+
+
+    <section id="clients" class="container-fluid silver-color">
+        <h2 class="text-center pt-3 pb-5 header-h2"> Naši partneri</h2>
+
+        <div class="row no-gutters clients-wrap clearfix wow fadeInUp"
+            style="visibility: visible; animation-name: fadeInUp;">
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_1.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_2.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_3.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_4.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_5.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_6.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_7.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_8.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_9.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_10.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_11.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_12.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_13.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_14.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_15.png">
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-6">
+
+                <div class="client-logo">
+
+
+
+
+                    <img loading="lazy" src="/images/logos/brands_16.png">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <h1>test</h1>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="vcard">
+                        <span class="fn org d-none">Test</span>
+                        <span class="tel d-none">Test</span>
+                        <h5>Test</h5>
+                        <p class="adr">
+                            <span class="street-address">Test</span><br />
+                            <span class="postal-code">Test</span><br />
+                            <span class="locality">Test</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Test</h5>
+                    <p>031 - 25 15 05</p>
+                    <a href="<?= $contact ->url; ?>">Test<i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="col-md-4 dash">
+                    <h5>Test</h5>
+                    <div class="character">
+                        <p>Aleksa Luketa</p>
+                        <a href="<?= $contact ->url; ?>">Test<i class="bi bi-arrow-right"></i></a>
+                        <img src="/site/templates/img/aleksa.png" class="img-fluid" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-text">
+                <div class="row">
+                    <div class="col-md-5">
+                        <ul class="navbar-nav">
+                            <a href="https://www.linkedin.com/company/robotcodesweden/">
+                                <li>Linkedin</li>
+                            </a>
+                            <a href="https://www.instagram.com/robot.code/">
+                                <li>Instagram</li>
+                            </a>
+                            <a href="https://www.facebook.com/robotcode.me">
+                                <li>Facebook</li>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-5">
+                        <p class="robot">
+                            ©<span id="year"></span> RobotCode, All rights reserved.
+                        </p>
+                    </div>
+
+                    <div class="col-md-2">
+                        <p class="policy">
+                            <a href="<?= $privacy ->url; ?>" style="color: #5a5961">Test</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+
+    <!-- Bootstrap bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+
+    <!-- js -->
+    <!-- jquery -->
+
+
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/chart.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- Slider for portfolio -->
+    <script src="js/slider.js"></script>
+
+
+    <script>
+        jQuery(document).ready(function () {
+            jQuery('.items').slick({
+                dots: false,
+                arrows: false,
+                centerMode: false,
+                centerPadding: '100px',
+                slidesToShow: 1,
+                arrows: true,
+                mobileFirst: true,
+                autoplay: false,
+                responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    }
+                },
+
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            })
+        });
+        filterSelection("all") // Execute the function and show all columns
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+    </script>
+
+
+</body>
+
+</html>
