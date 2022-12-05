@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="se">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APP dev</title>
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div id="mobile">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a href="#">
+            <img src="images/logo.png" alt="#" />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $about ->url; ?>"
+                  ><?= $about ->title; ?></a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $work ->url; ?>"
+                  ><?= $work ->title; ?></a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <div class="dropdown">
+                  <button
+                    class="dropdown-toggle nav-link header-links dropdown-style"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <?php echo __('Usluge');?>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="<?= $web_development ->url; ?>"
+                        ><?= $web_development ->title; ?></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="<?= $videography ->url; ?>"
+                        ><?= $videography ->title; ?></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="<?= $web_corporate_development ->url; ?>"
+                        ><?= $web_corporate_development ->title; ?></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $join ->url; ?>"
+                  ><?= $join ->title; ?></a
+                >
+              </li>
+              <?php foreach($languages as $l) : ?>
+              <!-- <li class="languages nav-item px-lg-3">
+                           <a class="nav-link header-links" href="<?php echo $page->localUrl($l);?>">
+                              <img class="justify-content-center align-self-center" src="<?php echo $config->urls->templates . 'img/icons/' . $l->title . '.png';?>" alt="<?php echo $l->title ?>">
+                           </a>
+                        </li>   -->
+              <?php startforeach; ?>
+            </ul>
+
+            <form class="d-flex px-lg-3" action="<?= $contact ->url; ?>">
+              <button class="btn" type="submit">
+                <?= $contact ->title; ?> <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+ 
+    
+    <section class="custom-5 app-custom-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card red-darkRed">
+              <div class="row align-items-center">
+                <div class="col-3">
+                  <div class="row">
+                    <div class="col-12">
+                      <h5>BEAUTY</h5>
+                    </div>
+                    <div class="col-12">
+                      <h3>SVE ZA ŽENU</h3>
+                    </div>
+                    <div class="col-12">
+                      <span>
+                        CONSULTING
+                        business
+                      </span>
+                    </div>
+                    <div class="col-12">
+                        <h3>PMW</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                    <table class="table table-dark">
+                        <tbody>
+                         <tr class="row justify-content-center align-self-center">
+                             <th scope="row" class="glass row align-items-center"><span class="table-heading">Ključne riječi</span></th>
+                         </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>Lean proizvodnja</span></th>
+                          </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>Upravljanje projektima</span></th>
+                          </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>Privremeno upravljanje</span></th>
+                          </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>Vođa projekta</span></th>
+                          </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>Konsultant za upravljanje</span></th>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+
+
+                <div class="col-3" style="max-width: 20%">
+                    <table class="table table-blue">
+                        <tbody>
+                         <tr class="row justify-content-center align-self-center" >
+                             <th scope="row" class="glass row align-items-center"><span class="table-heading">Trenutna <br>pozicija</span></th>
+                         </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>40+</span></th>
+                          </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>40+</span></th>
+                          </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>40+</span></th>
+                          </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>40+</span></th>
+                          </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>40+</span></th>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                </div>
+
+                <div class="col-3" style="max-width: 20%">
+                    <table class="table purple-blue">
+                        <tbody>
+                         <tr class="row justify-content-center align-self-center" >
+                             <th scope="row" class="glass row align-items-center"><span class="table-heading">Očekivana<br> pozicija</span></th>
+                         </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>3</span></th>
+                          </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>3</span></th>
+                          </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>3</span></th>
+                          </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>3</span></th>
+                          </tr>
+                          <tr class="text-center">
+                            <th scope="row"><span>3</span></th>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                </div>
+
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card blue-darkBlue">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-12">
+                      <h5>delivery</h5>
+                    </div>
+                    <div class="col-12">
+                      <h3>NEMAM TI KAD</h3>
+                    </div>
+                    <div class="col-12">
+                      <p>
+                        To create a website that reflects your image and values,
+                        we first need to know a little more about you and your
+                        business. Then we'll create a graphic profile and a
+                        design idea for you to approve.
+                      </p>
+                    </div>
+                    <div class="col-12">
+                      <a class="light-blue" href="#"> view project </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                  <img
+                    class="img-fluid"
+                    src="images/slike/img-20.png"
+                    alt="nemam ti kad app preview"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        
+      </div>
+    </section>
+  
+   
+       
+   
+    <footer>
+      <div class="container">
+        <h1>test</h1>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="vcard">
+              <span class="fn org d-none">Test</span>
+              <span class="tel d-none">Test</span>
+              <h5>Test</h5>
+              <p class="adr">
+                <span class="street-address">Test</span><br />
+                <span class="postal-code">Test</span><br />
+                <span class="locality">Test</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Test</h5>
+            <p>031 - 25 15 05</p>
+            <a href="<?= $contact ->url; ?>"
+              >Test<i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+          <div class="col-md-4 dash">
+            <h5>Test</h5>
+            <div class="character">
+              <p>Aleksa Luketa</p>
+              <a href="<?= $contact ->url; ?>"
+                >Test<i class="bi bi-arrow-right"></i
+              ></a>
+              <img
+                src="/site/templates/img/aleksa.png"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-text">
+          <div class="row">
+            <div class="col-md-5">
+              <ul class="navbar-nav">
+                <a href="https://www.linkedin.com/company/robotcodesweden/">
+                  <li>Linkedin</li>
+                </a>
+                <a href="https://www.instagram.com/robot.code/">
+                  <li>Instagram</li>
+                </a>
+                <a href="https://www.facebook.com/robotcode.me">
+                  <li>Facebook</li>
+                </a>
+              </ul>
+            </div>
+
+            <div class="col-md-5">
+              <p class="robot">
+                ©<span id="year"></span> RobotCode, All rights reserved.
+              </p>
+            </div>
+
+            <div class="col-md-2">
+              <p class="policy">
+                <a href="<?= $privacy ->url; ?>" style="color: #5a5961">Test</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
