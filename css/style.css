@@ -2,20 +2,15 @@
 Table of Content
 ====================================== */
 
-
 /*- Fonts
   - Scrollbar
   - General   
   - Media queries
 */
 
-
 /* ===================================
 Fonts
 ====================================== */
-
-
-
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
@@ -1285,8 +1280,6 @@ footer a {
   font-size: 2.5rem;
 }
 
-
-
 /* ===================================
 Media queries
 ====================================== */
@@ -1558,7 +1551,6 @@ Media queries
   }
 }
 
-
 @media (max-width: 576px) {
   footer .dash::after {
     content: "";
@@ -1689,7 +1681,6 @@ Media queries
     padding-top: 5rem;
   }
 }
-
 
 @media (max-width: 1200px) {
   body {
@@ -3567,6 +3558,22 @@ Media queries
   .blog-template-background {
     height: 100% !important;
   }
+
+  .custom-34 .tech-box {
+    width: 50% !important;
+    margin-top: 5rem;
+  }
+
+  .custom-36 {
+    padding-bottom: 10%;
+    margin: 25% 0;
+    margin-bottom: 25%;
+    margin-bottom: 15%;
+  }
+
+  .custom-37 img {
+    max-width: 100% !important;
+  }
 }
 /* responsive end */
 /* nikola  end*/
@@ -4828,20 +4835,28 @@ Media queries
     margin-top: -30%;
   }
 
-
-  .table td, .table th {
+  .table td,
+  .table th {
     padding: 6px !important;
     font-size: 13px !important;
   }
 
+  .auto-shop-hero img {
+    max-width: 100% !important;
+    margin-bottom: -5.5%;
+  }
 
+  .custom-34 .tech-box {
+    width: 50%;
+    margin-top: 5rem;
+  }
 }
 /* responive end */
 /* nikola end */
 
 /* Add padding BETWEEN each column (if you want) */
 .row {
-    margin: 8px -16px;
+  margin: 8px -16px;
 }
 
 /* Add padding BETWEEN each column (if you want) */
@@ -4857,8 +4872,8 @@ Media queries
 
 /* Clear floats after rows */
 .row:after {
-    content: "";
-    display: table;
+  content: "";
+  display: table;
   clear: both;
 }
 
@@ -4884,13 +4899,11 @@ Media queries
   position: relative;
   bottom: 10px;
   vertical-align: middle;
-
 }
 
-
-
-.table td, .table th {
-  padding: .75rem;
+.table td,
+.table th {
+  padding: 0.75rem;
   vertical-align: middle !important;
   border-top: none !important;
   font-size: 14px;
@@ -4919,19 +4932,16 @@ Media queries
   font-size: 15px;
 }
 
-.table-dark span{
+.table-dark span {
   font-size: 12px;
 }
-
 
 .table-blue {
   color: #fff;
   background-color: #076ce1 !important;
 }
 
-
-
-.table-blue span{
+.table-blue span {
   font-size: 12px;
 }
 
@@ -4942,7 +4952,7 @@ Media queries
   text-transform: uppercase;
 }
 
-.table-blue th{
+.table-blue th {
   font-weight: 400;
   font-size: 14px;
 }
@@ -4951,21 +4961,199 @@ Media queries
   background: #1d71f0;
 }
 
-.subheading-card{
-color:#CCCCCC;
-font-size: 18px;
-line-height: 30px;
-text-transform: uppercase;
-font-weight: bold;
-font-family: 'Poppins';
+.subheading-card {
+  color: #cccccc;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Poppins";
 }
 
-.card-rainbow{
-  background: rgb(250,99,66);
-  background: linear-gradient(50deg, rgba(250,99,66,1) 0%, rgba(172,47,166,1) 50%, rgba(102,0,255,1) 100%); 
+.card-rainbow {
+  background: rgb(250, 99, 66);
+  background: linear-gradient(
+    50deg,
+    rgba(250, 99, 66, 1) 0%,
+    rgba(172, 47, 166, 1) 50%,
+    rgba(102, 0, 255, 1) 100%
+  );
 }
 
 .card-client {
   font-size: 31px !important;
   font-weight: 700;
+}
+
+/* auto shop page start */
+/* auto shop hero start */
+.auto-shop-hero {
+  height: 50vh;
+  width: 100%;
+
+  background: rgb(71, 71, 71);
+  background: radial-gradient(
+    circle,
+    rgba(71, 71, 71, 1) 0%,
+    rgba(38, 38, 38, 1) 42%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.auto-shop-hero img {
+  max-width: 40%;
+  margin-bottom: -5.5%;
+  cursor: pointer;
+}
+/* auto shop hero end */
+
+/* auto shop custom 28 start */
+.custom-28[data-padding="10%"] {
+  padding: 10% 0;
+}
+/* auto shop custom 28 emd */
+
+/* custom 34 start */
+.custom-34 {
+  position: relative;
+
+  padding-bottom: 5%;
+}
+
+
+.custom-34 .tech-box {
+  color: #fff;
+  width: 40%;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2.5%;
+  min-height: 10.5rem;
+}
+
+.custom-34 .tech-box:nth-child(1) {
+  background-color: #d01024;
+  margin-right: 5%;
+}
+.custom-34 .tech-box:nth-child(2) {
+  background-color: #1e1e1e;
+}
+
+.custom-34 .tech-box:nth-child(1) img {
+  width: 56px;
+  min-height: 58px;
+  object-fit: cover;
+}
+.custom-34 .tech-box:nth-child(2) img {
+  width: 56px;
+  min-height: 50px;
+  object-fit: cover;
+}
+
+.custom-34 .tech-box .description {
+  font-size: 10px;
+  text-transform: uppercase;
+
+  margin-top: 2.5%;
+}
+
+.custom-34 .tech-box .big-text {
+  font-size: 37px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* custom 34 end */
+
+/* custom 35 start */
+.custom-35 {
+  padding-top: 5%;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.custom-35::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to bottom, #efefef, #e8e8e8);
+
+  left: 0;
+  right: 0;
+
+  height: 70%;
+  width: 100%;
+}
+/* custom 35 end */
+
+/* custom 36 start */
+.custom-36 {
+  background-color: #212429;
+  margin: 10% 0;
+}
+
+.custom-36 h2 {
+  color: #fff;
+}
+
+.custom-36 img {
+  margin-top: -5rem;
+}
+
+.custom-36 .container-custom {
+  max-width: 80%;
+  margin: 0 auto;
+}
+/* custom 36 end */
+
+/* custom 37 start */
+.custom-37 {
+  display: grid;
+  place-content: center;
+  margin-bottom: 10%;
+}
+
+.custom-37 img {
+  max-width: 65%;
+}
+/* custom 37 end */
+
+/* custom 38 start */
+.custom-38 {
+  min-height: 40vh;
+  background: url(../images/auto-shop/);
+}
+/* custom 38 end */
+
+/* custom 39 start */
+.custom-39 h2 {
+  color: #fff;
+}
+.custom-39 .container {
+  padding: 5rem;
+}
+
+/* custom 39 end */
+/* auto shop page end */
+
+.custom-34 .row[data-horizontal="true"]::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(to right, #808080, #ffffff);
+  height: 20%;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
