@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="se">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sve Za Zenu</title>
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div id="mobile">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a href="#">
+            <img src="images/logo.png" alt="#" />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $about ->url; ?>"
+                  ><?= $about ->title; ?></a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $work ->url; ?>"
+                  ><?= $work ->title; ?></a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <div class="dropdown">
+                  <button
+                    class="dropdown-toggle nav-link header-links dropdown-style"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <?php echo __('Usluge');?>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="<?= $web_development ->url; ?>"
+                        ><?= $web_development ->title; ?></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="<?= $videography ->url; ?>"
+                        ><?= $videography ->title; ?></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="<?= $web_corporate_development ->url; ?>"
+                        ><?= $web_corporate_development ->title; ?></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $join ->url; ?>"
+                  ><?= $join ->title; ?></a
+                >
+              </li>
+              <?php foreach($languages as $l) : ?>
+              <!-- <li class="languages nav-item px-lg-3">
+                           <a class="nav-link header-links" href="<?php echo $page->localUrl($l);?>">
+                              <img class="justify-content-center align-self-center" src="<?php echo $config->urls->templates . 'img/icons/' . $l->title . '.png';?>" alt="<?php echo $l->title ?>">
+                           </a>
+                        </li>   -->
+              <?php startforeach; ?>
+            </ul>
+
+            <form class="d-flex px-lg-3" action="<?= $contact ->url; ?>">
+              <button class="btn" type="submit">
+                <?= $contact ->title; ?> <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <section class="szz-hero place-center">
+      <img class="img-fluid img-1" src="images/szz/nova-zena-oprana-kosa-2.png"  alt="" />
+      <img class="img-fluid img-2" src="images/szz/phone-2.png" alt="phone" />
+    </section>
+    <section class="custom-17">
+      <div class="container">
+        <div class="row text-center justify-content-center">
+          <div class="col-12">
+            <h2 class="header-h2">Sve za ženu</h2>
+          </div>
+          <div class="col-lg-6 col-12">
+            <p>
+              Platforma Sve za ženu kreirana je za nju, za njenu laganiju
+              svakodnevicu. Formirana od nježnijeg pola za nježniji pol, baš
+              zbog nježnosti. Platforma nudi usluge ljepote, čija šarenolikost
+              stvara prečicu od njegovanog tijela ka njegovanom duhu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-18">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="images/szz/szz-Home.png" alt="" class="img-fluid" />
+            <img src="images/szz/Sacuvani.png" alt="" class="img-fluid" />
+          </div>
+          <div class="col-md-6">
+            <img src="images/szz/szz-Register.png" alt="" class="img-fluid" />
+            <img src="images/szz/szz-Servisi.png" alt="" class="img-fluid" />
+            <img src="images/szz/szz-Login.png" alt="" class="img-fluid" />
+            <img src="images/szz/szz-Error-404.png" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-19">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <img
+              src="images/szz/cetka+sampon+turpija.png"
+              alt=""
+              class="img-fluid img-1"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-12 mt-5 text-center">
+            <p class="white-color">
+              Tajna ljepote ne krije se samo u njezi, mislima i genetici, već i u
+              prirodi koja nas okružuje. Baš zbog toga što je Crna Gora sinonim
+              za divlju ljepotu, odlučili smo da u našim ženama probudimo taj
+              sinonim i upoznamo ih i sa kozmetikom koja je satkana od
+              prirode! Budimo sopstvenu srž, budimo ženstvenu prirodu!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container-smaller">
+        
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <img
+              src="images/szz/szz-sign-up-mobile.png"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-3 col-6"><img src="images/szz/szz-Home-mobile.png" alt="" class="img-fluid" /></div>
+          <div class="col-md-3 col-6"><img src="images/szz/szz-Search-results.png" alt="" class="img-fluid" /></div>
+          <div class="col-md-3 col-6"><img src="images/szz/szz-Spash-screen.png" alt="" class="img-fluid" /></div>
+          <div class="col-md-3 col-6"><img src="images/szz/szz-Single-mobile.png" alt="" class="img-fluid" /></div>
+          <div class="col-md-3 col-6"><img src="images/szz/szz-Login-Register-mobile.png" alt="" class="img-fluid" /></div>
+          <div class="col-md-3 col-6"><img src="images/szz/szz-Search-results-mobile-mobile.png" alt="" class="img-fluid" /></div>
+          <div class="col-md-3 col-6"><img src="images/szz/szz-Sign-in-mobile.png" alt="" class="img-fluid" /></div>
+        </div>
+      </div>
+    </section>
+    <section class="custom-20">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 text-center d-flex flex-column align-items-center">
+            <img class="img-fluid img-1" src="images/ntk/logo.png" alt="">
+            <h2 class="">
+              Zatražite Ponudu?
+            </h2>
+            <button class="btn mt-3">
+              Kliknite Ovdje
+            </button>
+          </div>
+          <div class="col-6">
+            <img src="images/szz/zena-png.png" alt="" class="img-fluid img-2">
+          </div>
+          <div class="col-12">
+            <img src="images/szz/pjena.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <h1>test</h1>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="vcard">
+              <span class="fn org d-none">Test</span>
+              <span class="tel d-none">Test</span>
+              <h5>Test</h5>
+              <p class="adr">
+                <span class="street-address">Test</span><br />
+                <span class="postal-code">Test</span><br />
+                <span class="locality">Test</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Test</h5>
+            <p>031 - 25 15 05</p>
+            <a href="<?= $contact ->url; ?>"
+              >Test<i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+          <div class="col-md-4 dash">
+            <h5>Test</h5>
+            <div class="character">
+              <p>Aleksa Luketa</p>
+              <a href="<?= $contact ->url; ?>"
+                >Test<i class="bi bi-arrow-right"></i
+              ></a>
+              <img
+                src="/site/templates/img/aleksa.png"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-text">
+          <div class="row">
+            <div class="col-md-5">
+              <ul class="navbar-nav">
+                <a href="https://www.linkedin.com/company/robotcodesweden/">
+                  <li>Linkedin</li>
+                </a>
+                <a href="https://www.instagram.com/robot.code/">
+                  <li>Instagram</li>
+                </a>
+                <a href="https://www.facebook.com/robotcode.me">
+                  <li>Facebook</li>
+                </a>
+              </ul>
+            </div>
+
+            <div class="col-md-5">
+              <p class="robot">
+                ©<span id="year"></span> RobotCode, All rights reserved.
+              </p>
+            </div>
+
+            <div class="col-md-2">
+              <p class="policy">
+                <a href="<?= $privacy ->url; ?>" style="color: #5a5961">Test</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- js -->
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -29,6 +29,7 @@ Fonts
   --secondary-color: #5215fc;
   --body-font-color: #1b1a2f;
   --subtext-font-color: #aaa8b5;
+  --pink-1: #fe94a4;
 
   /* nove boje */
   --orange: #ff8800;
@@ -1279,6 +1280,39 @@ footer a {
 #partner h6 {
   font-size: 2.5rem;
 }
+
+
+/* szz page start */
+/* szz hero */
+.szz-hero {
+  background: var(--pink-1) url(/images/szz/sve-za-zenu-desktop.png) no-repeat right;
+  background-size: contain;
+  position: relative;
+}
+
+.szz-hero .img-1 {
+  width: 680px;
+  min-height: 600px;
+  object-fit: cover;
+  margin-bottom: -8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.szz-hero .img-2 {
+  position: absolute;
+  width: 600px;
+  min-height: 600px;
+  left: 4%;
+  z-index: 1;
+  bottom: -40%;
+}
+/* szz hero end */
+
+
+
+
+
 
 /* ===================================
 Media queries
@@ -3516,6 +3550,7 @@ Media queries
   .custom-3 {
     padding-bottom: 10%;
   }
+
   /* .custom-3 img {
     margin-top: -8rem;
   } */
@@ -3593,6 +3628,25 @@ Media queries
   .custom-37 img {
     max-width: 100% !important;
   }
+
+
+
+  .szz-hero .img-1 {
+    padding-top: 2rem;
+    width: 90%;
+    margin: 0 auto;
+      margin-bottom: 0px;
+    min-height: 300px;
+    margin-bottom: -4rem;
+  }
+
+
+
+
+
+
+
+
 }
 /* responsive end */
 /* nikola  end*/
@@ -5166,3 +5220,4 @@ Media queries
   -moz-box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.15);
   width: 100%;
 }
+
