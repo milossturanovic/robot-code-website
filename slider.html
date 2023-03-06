@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mobile">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a href="#">
+              <img src="images/logo.png" alt="#" />
+            </a>
+  
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                <li class="nav-item px-lg-3">
+                  <a class="nav-link header-links" href="<?= $about ->url; ?>"
+                    ><?= $about ->title; ?></a
+                  >
+                </li>
+                <li class="nav-item px-lg-3">
+                  <a class="nav-link header-links" href="<?= $work ->url; ?>"
+                    ><?= $work ->title; ?></a
+                  >
+                </li>
+                <li class="nav-item px-lg-3">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle nav-link header-links dropdown-style"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <?php echo __('Usluge');?>
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="<?= $web_development ->url; ?>"
+                          ><?= $web_development ->title; ?></a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="<?= $videography ->url; ?>"
+                          ><?= $videography ->title; ?></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="<?= $web_corporate_development ->url; ?>"
+                          ><?= $web_corporate_development ->title; ?></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item px-lg-3">
+                  <a class="nav-link header-links" href="<?= $join ->url; ?>"
+                    ><?= $join ->title; ?></a
+                  >
+                </li>
+                <?php foreach($languages as $l) : ?>
+                <!-- <li class="languages nav-item px-lg-3">
+                             <a class="nav-link header-links" href="<?php echo $page->localUrl($l);?>">
+                                <img class="justify-content-center align-self-center" src="<?php echo $config->urls->templates . 'img/icons/' . $l->title . '.png';?>" alt="<?php echo $l->title ?>">
+                             </a>
+                          </li>   -->
+                <?php startforeach; ?>
+              </ul>
+  
+              <form class="d-flex px-lg-3" action="<?= $contact ->url; ?>">
+                <button class="btn" type="submit">
+                  <?= $contact ->title; ?> <i class="bi bi-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    <div class="pages">
+        <section class="first page">
+            <h2 class="title">Hey!</h2>
+        </section>
+        <section class="second page">
+            <h2 class="title">What is this?</h2>
+        </section>
+        <section class="third page">
+            <h2 class="title">I came here for the battle!</h2>
+        </section>
+        <section class="fourth page">
+            <h2 class="title">Хомяк грустить :(</h2>
+        </section>
+    </div>
+    <ul class="pagination">
+    </ul>
+    <script src="/js/app.js" charset="utf-8"></script>
+</body>
+
+
+
+<style>
+    * {
+	 padding: 0;
+	 margin: 0;
+}
+ html, body {
+	 height: 100%;
+	 width: 100%;
+}
+ .pages {
+	 height: 100%;
+	 width: 100%;
+	 position: relative;
+	 overflow: hidden;
+}
+ .page {
+	 height: 100%;
+	 width: 100%;
+	 position: absolute;
+	 bottom: -100%;
+	 transition: bottom 0.7s;
+}
+ .page:first-child {
+	 bottom: 0;
+}
+ .first {
+	 background-color: #dc322f;
+}
+ .second {
+	 background-color: #073642;
+}
+ .third {
+	 background-color: #cb4b16;
+}
+ .fourth {
+	 background-color: #6c71c4;
+}
+ .pagination {
+	 position: absolute;
+	 right: 20px;
+	 top: 50%;
+	 transform: translateY(-50%);
+}
+ .pagination > li {
+	 list-style: none;
+	 height: 20px;
+	 width: 20px;
+	 background: #000;
+	 border-radius: 50%;
+	 margin-top: 10px;
+	 transition: background 0.7s;
+}
+ .pagination > li.active {
+	 background: #fff;
+}
+ .title {
+	 width: 100%;
+	 position: absolute;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 text-align: center;
+}
+ 
+</style>
+
+
+
+<script>
+    window.onload = () => {
+  const Slider = function(pages, pagination) {
+    let slides = [],
+        btns = [],
+        count = 0,
+        current = 0,
+        touchstart = 0,
+        animation_state = false;
+
+    const init = () => {
+      slides = pages.children;
+      count = slides.length;
+      for(let i = 0; i < count; i++) {
+        slides[i].style.bottom = -(i * 100) + '%';
+        let btn = document.createElement('li');
+        btn.dataset.slide = i;
+        btn.addEventListener('click', btnClick)
+        btns.push(btn);
+        pagination.appendChild(btn);
+      }
+      btns[0].classList.add('active');
+    }
+
+    const gotoNum = (index) => {
+      if((index != current) && !animation_state) {
+        animation_state = true;
+        setTimeout(() => animation_state = false, 500);
+        btns[current].classList.remove('active');
+        current = index;
+        btns[current].classList.add('active');
+        for(let i = 0; i < count; i++) {
+          slides[i].style.bottom = (current - i) * 100 + '%';
+        }
+      }
+    }
+
+    const gotoNext = () => current < count - 1 ? gotoNum(current + 1) : false;
+    const gotoPrev = () => current > 0 ? gotoNum(current - 1) : false;
+    const btnClick = (e) => gotoNum(parseInt(e.target.dataset.slide));
+    pages.ontouchstart = (e) => touchstart = e.touches[0].screenY;
+    pages.ontouchend = (e) => touchstart < e.changedTouches[0].screenY ? gotoPrev() : gotoNext();
+    pages.onmousewheel = pages.onwheel = (e) => e.deltaY < 0 ? gotoPrev() : gotoNext();
+
+    init();
+  }
+
+  let pages = document.querySelector('.pages');
+  let pagination = document.querySelector('.pagination');
+  let slider = new Slider(pages, pagination)
+}
+</script>
+</html>

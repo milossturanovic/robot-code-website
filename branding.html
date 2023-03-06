@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="se">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO</title>
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body> <div id="mobile">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a href="#">
+            <img src="images/logo.png" alt="#" />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $about ->url; ?>"
+                  ><?= $about ->title; ?></a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $work ->url; ?>"
+                  ><?= $work ->title; ?></a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <div class="dropdown">
+                  <button
+                    class="dropdown-toggle nav-link header-links dropdown-style"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <?php echo __('Usluge');?>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="<?= $web_development ->url; ?>"
+                        ><?= $web_development ->title; ?></a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="<?= $videography ->url; ?>"
+                        ><?= $videography ->title; ?></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="<?= $web_corporate_development ->url; ?>"
+                        ><?= $web_corporate_development ->title; ?></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item px-lg-3">
+                <a class="nav-link header-links" href="<?= $join ->url; ?>"
+                  ><?= $join ->title; ?></a
+                >
+              </li>
+              <?php foreach($languages as $l) : ?>
+              <!-- <li class="languages nav-item px-lg-3">
+                           <a class="nav-link header-links" href="<?php echo $page->localUrl($l);?>">
+                              <img class="justify-content-center align-self-center" src="<?php echo $config->urls->templates . 'img/icons/' . $l->title . '.png';?>" alt="<?php echo $l->title ?>">
+                           </a>
+                        </li>   -->
+              <?php startforeach; ?>
+            </ul>
+
+            <form class="d-flex px-lg-3" action="<?= $contact ->url; ?>">
+              <button class="btn" type="submit">
+                <?= $contact ->title; ?> <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="pages">
+        <section class="first page ">
+          <div class="container center-div">
+            <div class="row align-items-center px-5">
+              <div class="col-md-6 d-flex flex-column gap-1">
+                <div class="row">
+                  <div class="col-12">
+                    <h4 class="subtext color-orange">OUR SERVICES</h4>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <h1 class="text-capitalize color-white">
+                      Search Engine Optimization
+                    </h1>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="color-white">
+                      Over 10 years of experience in creating visibility using SEO!
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="color-white">
+                      Robotcode is a web agency in Gothenburg with broad expertise
+                      in many different areas. One of our main competencies is in
+                      search engine optimization, and we help our clients rank
+                      higher on Google on a daily basis with the help of sustainable
+                      strategies. We are a team of skilled designers, developers,
+                      SEO specialists and IT consultants who work to create a
+                      complete online world for all our clients. We have offices in
+                      four different countries around the world and an incredible
+                      breadth of expertise in all our areas of expertise.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <a class="gradient-btn" href="#">Book a Consult</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img class="img-fluid" src="images/slike/img-13.png" alt="laptop" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="second page">
+          <div class="container center-div">
+            <div class="row align-items-center px-5">
+              <div class="col-md-6 d-flex flex-column gap-1">
+                <div class="row">
+                  <div class="col-12">
+                    <h4 class="subtext color-orange">OUR SERVICES</h4>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <h1 class="text-capitalize color-white">
+                      Search Engine Optimization
+                    </h1>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="color-white">
+                      Over 10 years of experience in creating visibility using SEO!
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="color-white">
+                      Robotcode is a web agency in Gothenburg with broad expertise
+                      in many different areas. One of our main competencies is in
+                      search engine optimization, and we help our clients rank
+                      higher on Google on a daily basis with the help of sustainable
+                      strategies. We are a team of skilled designers, developers,
+                      SEO specialists and IT consultants who work to create a
+                      complete online world for all our clients. We have offices in
+                      four different countries around the world and an incredible
+                      breadth of expertise in all our areas of expertise.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <a class="gradient-btn" href="#">Book a Consult</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col">col</div>
+                  <div class="col">col</div>
+                  <div class="w-100"></div>
+                  <div class="col">col</div>
+                  <div class="col">col</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="third page">
+            <h2 class="title">I came here for the battle!</h2>
+        </section>
+        <section class="fourth page">
+            <h2 class="title">Хомяк грустить :(</h2>
+        </section >
+        <footer class="fourth page">
+               <h2 class="title">Footer</h2>
+      </footer>
+      
+    </div>
+    <ul class="pagination">
+    </ul>
+    <script src="/js/app.js" charset="utf-8"></script>
+</body>
+
+
+
+<style>
+  
+  * {
+ padding: 0;
+ margin: 0;
+}
+
+html, body {
+ height: 100%;
+ width: 100%;
+}
+#mobile{
+    padding-bottom: 0px;
+  }
+.pages {
+ height: 100%;
+ width: 100%;
+ position: relative;
+ overflow: hidden;
+}
+.page {
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ bottom: -100%;
+ transition: bottom 0.7s;
+}
+.page:first-child {
+ bottom: 0;
+}
+.first {
+ background-color: #dc322f;
+}
+.second {
+ background-color: #073642;
+}
+.third {
+ background-color: #cb4b16;
+}
+.fourth {
+ background-color: #6c71c4;
+}
+.pagination {
+ position: absolute;
+ right: 20px;
+ top: 50%;
+ transform: translateY(-50%);
+ display: block;
+}
+.pagination > li {
+ list-style: none;
+ height: 20px;
+ width: 20px;
+ background: #000;
+ border-radius: 50%;
+ margin-top: 10px;
+ transition: background 0.7s;
+}
+.pagination > li.active {
+ background: #fff;
+}
+.center-div {
+ width: 100%;
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+<script>
+  window.onload = () => {
+const Slider = function(pages, pagination) {
+  let slides = [],
+      btns = [],
+      count = 0,
+      current = 0,
+      touchstart = 0,
+      animation_state = false;
+
+  const init = () => {
+    slides = pages.children;
+    count = slides.length;
+    for(let i = 0; i < count; i++) {
+      slides[i].style.bottom = -(i * 100) + '%';
+      let btn = document.createElement('li');
+      btn.dataset.slide = i;
+      btn.addEventListener('click', btnClick)
+      btns.push(btn);
+      pagination.appendChild(btn);
+    }
+    btns[0].classList.add('active');
+  }
+
+  const gotoNum = (index) => {
+    if((index != current) && !animation_state) {
+      animation_state = true;
+      setTimeout(() => animation_state = false, 500);
+      btns[current].classList.remove('active');
+      current = index;
+      btns[current].classList.add('active');
+      for(let i = 0; i < count; i++) {
+        slides[i].style.bottom = (current - i) * 100 + '%';
+      }
+    }
+  }
+
+  const gotoNext = () => current < count - 1 ? gotoNum(current + 1) : false;
+  const gotoPrev = () => current > 0 ? gotoNum(current - 1) : false;
+  const btnClick = (e) => gotoNum(parseInt(e.target.dataset.slide));
+  pages.ontouchstart = (e) => touchstart = e.touches[0].screenY;
+  pages.ontouchend = (e) => touchstart < e.changedTouches[0].screenY ? gotoPrev() : gotoNext();
+  pages.onmousewheel = pages.onwheel = (e) => e.deltaY < 0 ? gotoPrev() : gotoNext();
+
+  init();
+}
+
+let pages = document.querySelector('.pages');
+let pagination = document.querySelector('.pagination');
+let slider = new Slider(pages, pagination)
+}
+</script>
+
+
+</html>
